@@ -1,0 +1,115 @@
+div.top-image {
+    background-image: url('../../images/bac.jpg');
+    background-position: center;
+    height: 100vh;
+    /* no-repeat: büyük ekranlarda arkaplan resmi tekrarlanmasını engelle */
+    background-repeat: no-repeat;
+    /* cover: büyük ekranlar için arkaplan resminin hacmini sabit tutar */
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed; /* Arka plan sabit kalır */
+
+}
+section.content {
+    font-size: 2rem;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    margin-left: 10%;
+
+    & .lifestyle {
+        text-transform: uppercase;
+        font-weight: 1.7rem;
+    }    
+    & .men {
+        margin-top: 0.7rem;
+        font-weight: bold;
+    }
+    & .sale {
+        margin-block: 0.5rem;
+        font-weight: bold;
+    }
+    & .sale .presentage {
+        color: crimson;
+        /* margin-left: 0.8rem; */
+    }
+    & .shipping {
+        font-size: 1.5rem;
+    }
+    & button {
+        background-color: black;
+        color: white;
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+        padding: 0.6rem 1.6rem;
+        border-radius: 5px;
+    }
+}   
+@media (width < 1000px) {
+    div.top-image {
+        background-position: left;
+    }
+}
+main section.product.flex {
+    /* box-sizing: border-box; */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 1.4rem;
+
+    & article.card {
+        border-radius: 5px;
+        box-shadow:  0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        transition: 0.2s;
+        /* max-height: 390px; */
+    }
+    & img {
+        border-radius: 5px 5px 0 0;
+    }
+    & article.card:hover {
+        scale: 1.01;
+    }
+    & .card .content {
+        background-color: white;
+        border-radius: 0 0 5px 5px;
+
+    }
+    & .card .content .title {
+        padding-top: 0.7rem;
+        padding-inline: 0.4rem;
+        text-transform: capitalize;
+    }
+    & .card .content .description {
+        padding-inline: 0.4rem;
+        font-size: 0.8rem;
+        margin-top: 0.4rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.1rem;
+    }
+    & .card .content .price {
+        margin-left: 0.88rem;
+        font-size: 0.9rem;
+        color: rgb(199, 0, 40);
+        font-weight: bold;
+    }
+    & .add-to-cart {
+        background-color: var(--blue-button);
+        color: white;
+        border-radius: 4px;
+        padding: 6px 8px;
+        margin-right: 0.88rem;
+        font-size: 0.7rem;
+        gap: 0.33rem;
+    }
+    & .fa-solid {
+        color: white;
+    }
+}
+main h1.recommended {
+    margin: 2.3rem 0 2rem 2%;
+}
+@media (width < 600px) {
+    main h1.recommended {
+        margin: 2.3rem 0 2rem 0.3rem;
+        font-size: 1.6rem;
+    }   
+}
